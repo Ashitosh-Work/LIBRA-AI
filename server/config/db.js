@@ -9,6 +9,7 @@ async function connectDatabase() {
 
   mongoose.set("strictQuery", true);
 
+  console.log("mongouri", mongoUri);
   const connection = await mongoose.connect(mongoUri);
   console.log(`MongoDB connected: ${connection.connection.host}`);
 }
