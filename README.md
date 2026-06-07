@@ -40,31 +40,6 @@ server/
   validations/
 ```
 
-## Environment Variables
-
-Copy `.env.example` values into local env files:
-
-```bash
-cp server/.env.example server/.env
-cp client/.env.example client/.env
-```
-
-Backend:
-
-```env
-PORT=5000
-MONGO_URI=mongodb://127.0.0.1:27017/libra_expense_tracker
-JWT_SECRET=replace-with-a-long-random-secret
-JWT_EXPIRES_IN=7d
-CLIENT_ORIGIN=http://localhost:5173
-```
-
-Frontend:
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
 ## Setup
 
 1. Install dependencies:
