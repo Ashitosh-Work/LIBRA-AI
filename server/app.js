@@ -14,7 +14,7 @@ app.use(
     origin: "*",
   }),
 );
-app.use(express.json({ limit: "1mb" }));
+app.use(express.json());
 // app.use(
 //   rateLimit({
 //     windowMs: 15 * 60 * 1000,
