@@ -14,7 +14,11 @@ const mongoose = require("mongoose");
 //   console.log(`MongoDB connected: ${connection.connection.host}`);
 // }
 
+let isConnected = false;
+
 async function connectDatabase() {
+  if (isConnected) return;
+
   const mongoUri = process.env.MONGO_URI;
   if (!mongoUri) {
     throw new Error(
@@ -36,6 +40,8 @@ async function connectDatabase() {
     useUnifiedTopology: true,
     serverSelectionTimeoutMS: 30000,
   });
+
+  isConnected = true;
 }
 
 module.exports = connectDatabase;
